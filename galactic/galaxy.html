@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Pacifico', cursive;
+		}
+		.stars {
+			background: #000 url("https://thumb.cloud.mail.ru/weblink/thumb/xw1/LzT9/Q74g9tSsg/stars.png") repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -2;
+		}
+		.twinkling {
+			background: transparent url("https://thumb.cloud.mail.ru/weblink/thumb/xw1/LzT9/Q74g9tSsg/twinkling.png") repeat top center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			animation-name: move-stars;
+			animation-duration: 200s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes move-stars {
+			0% {
+				background-position: 0 0;
+			}
+			100% {
+				background-position: -10000px 5000px;
+			}
+		}
+		.system {
+			width: 1000px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+		.orbita {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			border: 1px white solid;
+			border-radius: 100%;
+			position: absolute;
+		}
+		.earth {
+			height: 500px;
+			width: 500px;
+			animation: spin 8s linear infinite;
+		}
+		.earth-img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		.jupiter {
+			height: 700px;
+			width: 700px;
+			animation: spin 8s linear infinite;
+		}
+		.jupiter-img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		.saturn {
+			height: 800px;
+			width: 800px;
+			animation: spin 8s linear infinite;
+		}
+		.saturn-img	{
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		.pluton {
+			height: 1100px;
+			width: 1100px;
+			animation: spin 8s linear infinite;
+		}
+		.pluton-img {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: -12px;
+		}
+		.mars-img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		.mars {
+			height: 600px;
+			width: 600px;
+			animation: spin 8s linear infinite;
+		}
+		.sun {
+			animation: scale-sun 4s ease infinite;
+		}
+		.sun-img {
+			width: 200px;
+			height: 200px;
+		}
+		.uran-img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		.uran{
+			height: 900px;
+			width: 900px;
+			animation: spin 8s linear infinite;
+		}
+		.neptun {
+			height: 1000px;
+			width: 1000px;
+			animation: spin 8s linear infinite;
+		}
+		.neptun-img {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			left: -12px;
+		}
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes scale-sun {
+			0% {
+				transform: scale(1.0) rotate(0deg);
+			}
+			50% {
+				transform: scale(0.5) rotate(-365deg);
+			}
+			100% {
+				transform: scale(1.0) rotate(0deg);
+			}
+		}
+		h1 {
+			color: ghostwhite;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1>By Solar System</h1>
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="system">
+		<div class="sun"><img src="https://www.dropbox.com/s/g02pto204mz1ywi/sun.png?raw=1" class="sun-img"></div>
+		<div class="earth orbita"><img src="https://www.dropbox.com/s/ropzlyhb1v19l5t/earth.png?raw=1" alt="" class="earth-img"></div>
+		<div class="mars orbita"><img src="https://www.dropbox.com/s/fa9biyj617n1q30/mars.png?raw=1" alt="" class="mars-img"></div>
+		<div class="jupiter orbita"><img src="https://www.dropbox.com/s/d28oxi2c74zcoqk/jupiter.png?raw=1" alt="" class="jupiter-img"></div>
+		<div class="saturn orbita"><img src="https://www.dropbox.com/s/h8pj72v6mmaa0yq/saturn.png?raw=1" alt="" class="saturn-img"></div>
+		<div class="pluton orbita"><img src="https://www.dropbox.com/s/z7axkafhs887t9b/pluto.png?raw=1" alt="" class="pluton-img"></div>
+		<div class="uran orbita"><img src="https://www.dropbox.com/s/du6znsmfos2r4ry/uranus.png?raw=1" alt="" class="uran-img"></div>
+		<div class="neptun orbita"><img src="https://www.dropbox.com/s/170sr7xl6gxpona/neptune.png?raw=1" alt="" class="neptun-img"></div>
+	</div>
+</body>
+</html>
